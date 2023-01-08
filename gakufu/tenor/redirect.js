@@ -1,9 +1,10 @@
 'user strict';
 
 var ref = document.referrer;
-print(ref[0])
 
-if (ref.match(/index/) == -1) {
-    //含まれない場合の処理
+if (ref.match(/index/) != null) {
+    // index.htmlから来た場合
+} else {
+    // index.html以外から来た場合
     location.href = "./index.html";
 }
